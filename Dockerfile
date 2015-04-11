@@ -23,5 +23,5 @@ RUN    wget http://openresty.org/download/ngx_openresty-1.7.10.1.tar.gz \
   && make install \
   && rm -rf /ngx_openresty*
 
-EXPOSE 8080
+WORKDIR /app
 CMD /usr/local/openresty/nginx/sbin/nginx -p `pwd` -c nginx.conf
